@@ -1,10 +1,12 @@
 package com.example.navigation
 
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -32,8 +34,24 @@ class MainActivity : AppCompatActivity() {
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
         )
+
+        toggle.setHomeAsUpIndicator(R.drawable.outline_360_24_dfdf)
+        toggle.isDrawerIndicatorEnabled = false
+        toolbar.navigationIcon?.setTint(Color.WHITE)
+
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
+
+        toolbar.setNavigationOnClickListener {
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.closeDrawer(GravityCompat.START)
+            } else {
+                drawerLayout.openDrawer(GravityCompat.START)
+            }
+        }
+
+
+
 
         // Manejo de clics en menú
         navView.setNavigationItemSelectedListener {
