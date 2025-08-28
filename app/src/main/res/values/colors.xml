@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores principales -->
+    <color name="colorPrimary">#1056E4</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <!-- Colores de fondo y texto -->
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorText">#000000</color>
+
+    <!-- Colores personalizados del Navigation Drawer -->
+    <color name="colorDrawerBackground">#F5F5F5</color>
+    <color name="colorDrawerText">#333333</color>
+</resources>
